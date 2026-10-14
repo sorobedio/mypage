@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Bedionita Soro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Bedionita Soro</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav class="nav">
+      <a href="index.html">About</a>
+      <a href="research.html" class="active" aria-current="page">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="learning.html">Continual Learning</a>
+      <a href="training.html">Training</a>
+      <a href="others.html">Others</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head"><div class="wrap">
+  <h1>Research Projects</h1>
+  <p>Generative weight-space learning, neural network synthesis, and AutoML.</p>
+</div></div>
+
+<main class="wrap content">
+  <div class="block">
+    <h2>Current Projects</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Generative Weight Synthesis</h3>
+        <p>Generating neural network weights with diffusion, flow matching, and
+          autoregressive models, conditioned on architecture or task.</p>
+        <p class="tags"><span>Diffusion</span><span>Flow matching</span><span>Autoregressive</span></p>
+      </article>
+      <article class="card">
+        <h3>Latent Representations of Model Weights</h3>
+        <p>Encoding pretrained weights into structured latent spaces with VAEs and
+          autoencoders, as a basis for generation, merging, and analysis.</p>
+        <p class="tags"><span>VAE</span><span>Representation learning</span></p>
+      </article>
+      <article class="card">
+        <h3>Latent-Space Model Merging</h3>
+        <p>Merging models in a learned latent space with optimal transport
+          alignment (LS-Merge), extended toward mixture-of-experts compression.</p>
+        <p class="tags"><span>Model merging</span><span>Optimal transport</span><span>MoE</span></p>
+      </article>
+      <article class="card">
+        <h3>Configuration-to-Weights Generation</h3>
+        <p>Synthesizing weights directly from architectural specifications, with
+          transfer across model families and scales.</p>
+        <p class="tags"><span>AutoML</span><span>Cross-architecture transfer</span></p>
+      </article>
+      <!-- Copy an <article class="card"> block to add a project -->
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>Funding</h2>
+    <ul class="list">
+      <li><span class="date">2026</span><span>Google TPU Research Award, <em>Generative AutoML</em></span></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">&copy; 2026 Bedionita Soro &middot; Kim Jaechul Graduate School of AI, KAIST</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
