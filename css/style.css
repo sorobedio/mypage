@@ -119,6 +119,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.25; }
 .pubs p { margin: 0; }
 .title { font-weight: 600; }
 .authors { color: var(--muted); font-size: .92rem; }
+.conf { font-style: italic; font-size: .9rem; color: var(--accent); }
 .tldr { font-size: .93rem; margin-top: 6px !important; }
 .pub-links { display: flex; flex-wrap: wrap; gap: 14px; font-size: .85rem; margin-top: 6px !important; }
 

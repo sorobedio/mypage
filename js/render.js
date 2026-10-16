@@ -76,6 +76,7 @@
             <span class="venue">${esc(i.venue)}</span>
             <p class="title">${mdInline(i.title)}</p>
             <p class="authors">${mdInline(i.authors)}</p>
+            ${i.conference ? `<p class="conf">${mdInline(i.conference)}</p>` : ""}
             ${i.tldr ? `<p class="tldr">${mdInline(i.tldr)}</p>` : ""}
             ${parseLinks(i.links).length ? `<p class="pub-links">${parseLinks(i.links).map((l) =>
               `<a href="${esc(safeUrl(l.url))}">${esc(l.label)}</a>`).join("")}</p>` : ""}
