@@ -1,34 +1,44 @@
 # Personal academic website
 
-Static multi-page site (HTML, CSS, JS). No build step.
+Static site for GitHub Pages. No build step. All content lives in two JSON files
+and is edited from a private dashboard at `/admin/`.
 
 ## Structure
 ```
-index.html              About + News (must stay at the root)
-pages/
-  research.html         Research projects
-  publications.html     Publications
-  learning.html         Continual learning & refreshing
-  training.html         Training, teaching, talks
-  others.html           Awards, reviewing, community
-  contact.html          Contact
-css/
-  style.css             shared styling and colors
-js/
-  script.js             mobile menu toggle
-assets/
-  images/profile.jpg    your photo (square, ~400x400)
-  docs/cv.pdf           your CV
+index.html            site shell; pages render from data/ (routes: #/<page>, #/post/<slug>)
+data/site.json        profile, settings, pages and their sections
+data/posts.json       stories
+admin/                dashboard (index.html, admin.js, admin.css)
+js/render.js          section/page renderers, shared by site and dashboard preview
+js/script.js          router, menu, comments
+css/style.css         site styling (light + dark)
+assets/               images, CV, uploads (assets/uploads/)
+pages/*.html          redirects from the old multi-page URLs
 ```
 
-## Deploy on GitHub Pages
-1. Create a public repo named `<your-username>.github.io`.
-2. Upload the contents of this folder so `index.html` is at the repo root.
-3. Settings > Pages > Source: `Deploy from a branch`, branch `main`, folder `/ (root)`.
-4. Open `https://<your-username>.github.io`.
+## Dashboard
+Open `https://sorobedio.github.io/admin/` and sign in with a fine-grained GitHub token:
+GitHub → Settings → Developer settings → Fine-grained tokens → New token,
+repository access **only `sorobedio.github.io`**, permission **Contents: Read and write**.
 
-## Editing
-- Replace every `[ ... ]` placeholder and `#` link.
-- The top menu is plain HTML at the top of each page. Links from `index.html` point to `pages/...`; links inside `pages/` point to siblings directly and to `../index.html`.
-- To add a page: copy a file in `pages/`, edit it, and add its link to the `<nav>` block in every page.
-- Colors: `--bar` (menu bar) and `--accent` in `css/style.css`.
+The dashboard only opens for the `sorobedio` account with write access, and GitHub
+rejects writes from anyone else. The `/admin/` URL itself is public (GitHub Pages can't
+hide files), is not linked anywhere, and is excluded from search engines.
+
+From the dashboard you can edit any section, add, reorder, duplicate or delete sections
+and pages, write stories (markdown with live preview), edit profile links, and upload
+images, a CV or other files. **Publish** commits the changes; the live site updates in about a minute.
+
+Section types: text (markdown), dated list, cards, publications, tags, stories list, profile header.
+
+## Comments (giscus)
+Story comments use GitHub Discussions, so commenters must sign in with GitHub.
+One-time setup:
+1. Repo Settings → General → Features → enable **Discussions**.
+2. Install the giscus app on this repo: https://github.com/apps/giscus
+3. On https://giscus.app enter `sorobedio/sorobedio.github.io`, choose the **Announcements**
+   category, and copy `data-category-id`.
+4. Dashboard → Profile & settings → Comments → paste the Category ID → Publish.
+
+## Local preview
+`python3 -m http.server` in this folder, then open http://localhost:8000.

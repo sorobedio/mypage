@@ -1,0 +1,262 @@
+{
+  "site": {
+    "name": "Bedionita Soro",
+    "description": "Bedionita Soro, postdoctoral researcher in the MLAI Lab at KAIST, working on generative weight-space learning, neural network synthesis, and AutoML.",
+    "footer": "© 2026 Bedionita Soro · Kim Jaechul Graduate School of AI, KAIST",
+    "owner": "sorobedio",
+    "repo": "sorobedio.github.io",
+    "branch": "main",
+    "giscus": {
+      "repo": "sorobedio/sorobedio.github.io",
+      "repoId": "R_kgDOVIdJtw",
+      "category": "Announcements",
+      "categoryId": ""
+    }
+  },
+  "profile": {
+    "name": "Bedionita Soro",
+    "role": "Postdoctoral Researcher\nMLAI Lab, Kim Jaechul Graduate School of AI, KAIST, Seoul",
+    "photo": "assets/images/profile.jpg",
+    "links": [
+      { "label": "CV", "url": "assets/docs/cv.pdf" },
+      { "label": "Google Scholar", "url": "https://scholar.google.com/" },
+      { "label": "GitHub", "url": "https://github.com/sorobedio" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/" },
+      { "label": "Email", "url": "mailto:sorobedio@kaist.ac.kr" }
+    ]
+  },
+  "pages": [
+    {
+      "id": "about",
+      "title": "About",
+      "subtitle": "",
+      "nav": true,
+      "sections": [
+        {
+          "id": "s-hero",
+          "type": "profile",
+          "title": "",
+          "body": "I work in the **MLAI Lab** (Machine Learning & Artificial Intelligence Lab) with Professor Sung Ju Hwang. My research centers on generative weight-space learning, neural network synthesis, and AutoML: encoding pretrained model weights into structured latent representations, generative modeling over those representations (diffusion, flow matching, autoregressive models, VAEs), and transfer across architectures. The long-term goal is a generative AutoML system that synthesizes high-performing network weights directly from architectural specifications, reducing training cost and making model development more accessible.\n\nI received my PhD from KAIST in February 2026 with the thesis *Weight-Space Learning as a Foundation for Deep AutoML*."
+        },
+        {
+          "id": "s-news",
+          "type": "list",
+          "title": "News",
+          "items": [
+            { "date": "2026", "text": "LS-Merge accepted at ICLR 2026." },
+            { "date": "Feb 2026", "text": "PhD conferred, KAIST." },
+            { "date": "2026", "text": "Received a Google TPU Research Award for *Generative AutoML*." },
+            { "date": "2026", "text": "Reviewer for NeurIPS 2026." }
+          ]
+        },
+        {
+          "id": "s-latest",
+          "type": "posts",
+          "title": "Latest Stories",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "subtitle": "Generative weight-space learning, neural network synthesis, and AutoML.",
+      "nav": true,
+      "sections": [
+        {
+          "id": "s-projects",
+          "type": "cards",
+          "title": "Current Projects",
+          "items": [
+            { "title": "Generative Weight Synthesis", "text": "Generating neural network weights with diffusion, flow matching, and autoregressive models, conditioned on architecture or task.", "tags": "Diffusion, Flow matching, Autoregressive" },
+            { "title": "Latent Representations of Model Weights", "text": "Encoding pretrained weights into structured latent spaces with VAEs and autoencoders, as a basis for generation, merging, and analysis.", "tags": "VAE, Representation learning" },
+            { "title": "Latent-Space Model Merging", "text": "Merging models in a learned latent space with optimal transport alignment (LS-Merge), extended toward mixture-of-experts compression.", "tags": "Model merging, Optimal transport, MoE" },
+            { "title": "Configuration-to-Weights Generation", "text": "Synthesizing weights directly from architectural specifications, with transfer across model families and scales.", "tags": "AutoML, Cross-architecture transfer" }
+          ]
+        },
+        {
+          "id": "s-funding",
+          "type": "list",
+          "title": "Funding",
+          "items": [
+            { "date": "2026", "text": "Google TPU Research Award, *Generative AutoML*" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "publications",
+      "title": "Publications",
+      "subtitle": "Peer-reviewed papers and thesis.",
+      "nav": true,
+      "sections": [
+        {
+          "id": "s-pub-2026",
+          "type": "publications",
+          "title": "2026",
+          "items": [
+            { "venue": "ICLR 2026", "title": "LS-Merge: [full paper title]", "authors": "**Bedionita Soro**, [co-authors]", "links": "Paper | #\nCode | #\nBibTeX | #" }
+          ]
+        },
+        {
+          "id": "s-pub-2025",
+          "type": "publications",
+          "title": "2025",
+          "items": [
+            { "venue": "ICLR 2025", "title": "D2NWG: [full paper title]", "authors": "**Bedionita Soro**, [co-authors]", "links": "Paper | #\nCode | #\nBibTeX | #" }
+          ]
+        },
+        {
+          "id": "s-pub-2024",
+          "type": "publications",
+          "title": "2024",
+          "items": [
+            { "venue": "NeurIPS 2024", "title": "SNE: [full paper title]", "authors": "[authors, with **Bedionita Soro**]", "links": "Paper | #\nCode | #\nBibTeX | #" }
+          ]
+        },
+        {
+          "id": "s-thesis",
+          "type": "publications",
+          "title": "Thesis",
+          "items": [
+            { "venue": "PhD 2026", "title": "Weight-Space Learning as a Foundation for Deep AutoML", "authors": "**Bedionita Soro**. KAIST.", "links": "PDF | #" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stories",
+      "title": "Stories",
+      "subtitle": "Notes, stories, and thoughts.",
+      "nav": true,
+      "sections": [
+        {
+          "id": "s-all-posts",
+          "type": "posts",
+          "title": "",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "title": "Continual Learning",
+      "subtitle": "Courses, reading, and skills I keep refreshing.",
+      "nav": true,
+      "sections": [
+        {
+          "id": "s-courses",
+          "type": "list",
+          "title": "Courses & Certificates",
+          "items": [
+            { "date": "2026", "text": "[Course name], [Provider]" },
+            { "date": "2025", "text": "[Course name], [Provider]" }
+          ]
+        },
+        {
+          "id": "s-studying",
+          "type": "list",
+          "title": "Currently Studying",
+          "items": [
+            { "date": "2026", "text": "[Topic or book], [short note]" }
+          ]
+        },
+        {
+          "id": "s-skills",
+          "type": "tags",
+          "title": "Tools & Skills",
+          "tags": "PyTorch, JAX / Flax, TPU, Distributed training, Hugging Face"
+        }
+      ]
+    },
+    {
+      "id": "training",
+      "title": "Training",
+      "subtitle": "Workshops, teaching, mentoring, and talks.",
+      "nav": true,
+      "sections": [
+        {
+          "id": "s-workshops",
+          "type": "list",
+          "title": "Workshops & Schools Attended",
+          "items": [
+            { "date": "2026", "text": "[Summer school or workshop], [Location]" }
+          ]
+        },
+        {
+          "id": "s-teaching",
+          "type": "list",
+          "title": "Teaching & Mentoring",
+          "items": [
+            { "date": "2026", "text": "[Course, tutorial, or students mentored]" }
+          ]
+        },
+        {
+          "id": "s-talks",
+          "type": "list",
+          "title": "Talks",
+          "items": [
+            { "date": "2026", "text": "[Talk title], [Venue]" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "others",
+      "title": "Others",
+      "subtitle": "Awards, reviewing, and community work.",
+      "nav": true,
+      "sections": [
+        {
+          "id": "s-awards",
+          "type": "list",
+          "title": "Awards & Grants",
+          "items": [
+            { "date": "2026", "text": "Google TPU Research Award, *Generative AutoML*" }
+          ]
+        },
+        {
+          "id": "s-reviewing",
+          "type": "list",
+          "title": "Reviewing",
+          "items": [
+            { "date": "2026", "text": "NeurIPS" }
+          ]
+        },
+        {
+          "id": "s-community",
+          "type": "list",
+          "title": "Community",
+          "items": [
+            { "date": "Ongoing", "text": "Developing a writing system and educational materials for the Senufo language (Korhogo dialect)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Contact",
+      "subtitle": "",
+      "nav": true,
+      "sections": [
+        {
+          "id": "s-address",
+          "type": "text",
+          "title": "Address",
+          "body": "MLAI Lab  \nKim Jaechul Graduate School of AI, KAIST  \nSeoul, South Korea"
+        },
+        {
+          "id": "s-online",
+          "type": "list",
+          "title": "Online",
+          "items": [
+            { "date": "Email", "text": "[sorobedio@kaist.ac.kr](mailto:sorobedio@kaist.ac.kr)" },
+            { "date": "Scholar", "text": "[Google Scholar](https://scholar.google.com/)" },
+            { "date": "GitHub", "text": "[github.com/sorobedio](https://github.com/sorobedio)" },
+            { "date": "LinkedIn", "text": "[linkedin.com/in/[username]](https://www.linkedin.com/)" }
+          ]
+        }
+      ]
+    }
+  ]
+}

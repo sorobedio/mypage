@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello, world",
+    "date": "2026-10-16",
+    "summary": "A first story on the new site.",
+    "draft": false,
+    "body": "Welcome to my new site. I'll use this space to share stories about research, life in Seoul, and the things I'm learning along the way.\n\nComments are open below. Sign in with GitHub to join the conversation."
+  }
+]

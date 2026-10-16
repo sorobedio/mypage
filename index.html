@@ -4,76 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bedionita Soro | Postdoctoral Researcher, KAIST</title>
-  <meta name="description" content="Bedionita Soro, postdoctoral researcher at KAIST working on generative weight-space learning, neural network synthesis, and AutoML.">
+  <meta name="description" content="Bedionita Soro, postdoctoral researcher in the MLAI Lab at KAIST, working on generative weight-space learning, neural network synthesis, and AutoML.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="topbar">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Bedionita Soro</a>
+    <a class="brand" href="#/">Bedionita Soro</a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
-    <nav class="nav">
-      <a href="index.html" class="active" aria-current="page">About</a>
-      <a href="pages/research.html">Research</a>
-      <a href="pages/publications.html">Publications</a>
-      <a href="pages/learning.html">Continual Learning</a>
-      <a href="pages/training.html">Training</a>
-      <a href="pages/others.html">Others</a>
-      <a href="pages/contact.html">Contact</a>
-    </nav>
+    <nav class="nav"></nav>
   </div>
 </header>
 
-<main class="wrap">
-  <section class="hero">
-    <img class="avatar" src="assets/images/profile.jpg" alt="Photo of Bedionita Soro"
-         onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'avatar avatar-fallback',textContent:'BS'}))">
-    <div>
-      <h1>Bedionita Soro</h1>
-      <p class="role">Postdoctoral Researcher<br>Kim Jaechul Graduate School of AI, KAIST, Seoul</p>
-      <p>
-        I work in the Weight-Space Learning Lab with Professor Sung Ju Hwang.
-        My research centers on generative weight-space learning, neural network
-        synthesis, and AutoML: encoding pretrained model weights into structured
-        latent representations, generative modeling over those representations
-        (diffusion, flow matching, autoregressive models, VAEs), and transfer across
-        architectures. The long-term goal is a generative AutoML system that
-        synthesizes high-performing network weights directly from architectural
-        specifications, reducing training cost and making model development more
-        accessible.
-      </p>
-      <p>
-        I received my PhD from KAIST in February 2026 with the thesis
-        <em>Weight-Space Learning as a Foundation for Deep AutoML</em>.
-      </p>
-      <div class="links">
-        <a href="assets/docs/cv.pdf">CV</a>
-        <a href="https://scholar.google.com/">Google Scholar</a>
-        <a href="https://github.com/">GitHub</a>
-        <a href="https://www.linkedin.com/">LinkedIn</a>
-        <a href="mailto:your.email@kaist.ac.kr">Email</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="content">
-    <div class="block">
-      <h2>News</h2>
-      <ul class="list">
-        <!-- Newest first -->
-        <li><span class="date">2026</span><span>LS-Merge accepted at ICLR 2026.</span></li>
-        <li><span class="date">Feb 2026</span><span>PhD conferred, KAIST.</span></li>
-        <li><span class="date">2026</span><span>Received a Google TPU Research Award for <em>Generative AutoML</em>.</span></li>
-        <li><span class="date">2026</span><span>Reviewer for NeurIPS 2026.</span></li>
-      </ul>
-    </div>
-  </section>
+<main id="app">
+  <div class="wrap content"><p class="note">Loading…</p></div>
 </main>
 
 <footer class="site-footer">
   <div class="wrap">&copy; 2026 Bedionita Soro &middot; Kim Jaechul Graduate School of AI, KAIST</div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+<script src="js/render.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
