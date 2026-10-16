@@ -29,7 +29,7 @@
     const shown = count > 0 ? visible.slice(0, count) : visible;
     if (!shown.length) return `<p class="note">No stories yet.</p>`;
     return `<div class="post-list">${shown.map((p) => `
-      <a class="post-item" href="#/post/${encodeURIComponent(p.slug)}">
+      <a class="post-item" href="/post/${encodeURIComponent(p.slug)}/">
         <span class="post-date">${fmtDate(p.date)}</span>
         <span class="post-title">${esc(p.title)}</span>
         ${p.summary ? `<span class="post-summary">${esc(p.summary)}</span>` : ""}
@@ -69,11 +69,14 @@
     },
     publications(s) {
       return `${heading(s)}<ol class="pubs">${(s.items || []).map((i) => `
-        <li>
-          <span class="venue">${esc(i.venue)}</span>
+        <li class="${i.image ? "has-fig" : ""}">
+          ${i.image ? `<a class="pub-fig" href="${esc(i.image)}" target="_blank" rel="noopener">
+            <img src="${esc(i.image)}" alt="Concept figure: ${esc(i.title)}" loading="lazy"></a>` : ""}
           <div>
+            <span class="venue">${esc(i.venue)}</span>
             <p class="title">${mdInline(i.title)}</p>
             <p class="authors">${mdInline(i.authors)}</p>
+            ${i.tldr ? `<p class="tldr">${mdInline(i.tldr)}</p>` : ""}
             ${parseLinks(i.links).length ? `<p class="pub-links">${parseLinks(i.links).map((l) =>
               `<a href="${esc(safeUrl(l.url))}">${esc(l.label)}</a>`).join("")}</p>` : ""}
           </div>
@@ -102,7 +105,7 @@
 
   function renderPost(post) {
     return `<section class="page-head"><div class="wrap narrow">
-        <p class="crumb"><a href="#/stories">&larr; All stories</a></p>
+        <p class="crumb"><a href="/stories/">&larr; All stories</a></p>
         <h1>${esc(post.title)}</h1>
         <p>${fmtDate(post.date)}</p>
       </div></section>

@@ -1,5 +1,7 @@
 // Public site: loads data/*.json and renders pages client-side.
-// Routes: #/<page-id>  and  #/post/<slug>
+// Routes: /<page-id>/  and  /post/<slug>/
+// Every route is served the same shell: index.html, a copy in <page-id>/index.html
+// (written by the dashboard on publish), or 404.html as a fallback.
 (function () {
   const app = document.getElementById("app");
   const nav = document.querySelector(".nav");
@@ -18,10 +20,12 @@
     return r.json();
   });
 
+  const pageUrl = (p) => (p === data.pages[0] ? "/" : `/${encodeURIComponent(p.id)}/`);
+
   function buildNav(active) {
     const { esc } = SiteRender;
     nav.innerHTML = data.pages.filter((p) => p.nav !== false).map((p) =>
-      `<a href="#/${esc(p.id)}"${p.id === active ? ' class="active" aria-current="page"' : ""}>${esc(p.title)}</a>`
+      `<a href="${pageUrl(p)}"${p.id === active ? ' class="active" aria-current="page"' : ""}>${esc(p.title)}</a>`
     ).join("");
   }
 
@@ -51,7 +55,9 @@
 
   function route() {
     if (!data) return;
-    const parts = location.hash.replace(/^#\/?/, "").split("/").map(decodeURIComponent);
+    // Old #/<page> links still work.
+    if (location.hash.startsWith("#/")) history.replaceState(null, "", "/" + location.hash.slice(2).replace(/\/?$/, "/"));
+    const parts = location.pathname.split("/").filter(Boolean).map(decodeURIComponent);
     nav.classList.remove("open");
     window.scrollTo(0, 0);
 
@@ -72,10 +78,10 @@
   }
 
   function notFound() {
-    app.innerHTML = `<div class="wrap content"><h1>Not found</h1><p><a href="#/">Back home</a></p></div>`;
+    app.innerHTML = `<div class="wrap content"><h1>Not found</h1><p><a href="/">Back home</a></p></div>`;
   }
 
-  Promise.all([fetchJson("data/site.json"), fetchJson("data/posts.json").catch(() => [])])
+  Promise.all([fetchJson("/data/site.json"), fetchJson("/data/posts.json").catch(() => [])])
     .then(([site, posts]) => {
       data = { ...site, posts };
       document.querySelector(".brand").textContent = site.site.name;
@@ -86,5 +92,15 @@
       app.innerHTML = `<div class="wrap content"><p class="note">Could not load site content (${SiteRender.esc(e.message)}).</p></div>`;
     });
 
-  window.addEventListener("hashchange", route);
+  // Navigate between pages without reloading.
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (!a || !data || a.getAttribute("href")?.startsWith("#") || e.metaKey || e.ctrlKey || e.shiftKey || a.target) return;
+    const url = new URL(a.href, location.href);
+    if (url.origin !== location.origin || /\.\w+$/.test(url.pathname) || url.pathname.startsWith("/admin")) return;
+    e.preventDefault();
+    if (url.pathname !== location.pathname) history.pushState(null, "", url.pathname);
+    route();
+  });
+  window.addEventListener("popstate", route);
 })();

@@ -18,11 +18,26 @@
     "role": "Postdoctoral Researcher\nMLAI Lab, Kim Jaechul Graduate School of AI, KAIST, Seoul",
     "photo": "assets/images/profile.jpg",
     "links": [
-      { "label": "CV", "url": "assets/docs/cv.pdf" },
-      { "label": "Google Scholar", "url": "https://scholar.google.com/" },
-      { "label": "GitHub", "url": "https://github.com/sorobedio" },
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/" },
-      { "label": "Email", "url": "mailto:sorobedio@kaist.ac.kr" }
+      {
+        "label": "CV",
+        "url": "assets/docs/cv.pdf"
+      },
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=oHgbNZQAAAAJ&hl=en"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/sorobedio"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/"
+      },
+      {
+        "label": "Email",
+        "url": "mailto:sorobedio@kaist.ac.kr"
+      }
     ]
   },
   "pages": [
@@ -43,10 +58,22 @@
           "type": "list",
           "title": "News",
           "items": [
-            { "date": "2026", "text": "LS-Merge accepted at ICLR 2026." },
-            { "date": "Feb 2026", "text": "PhD conferred, KAIST." },
-            { "date": "2026", "text": "Received a Google TPU Research Award for *Generative AutoML*." },
-            { "date": "2026", "text": "Reviewer for NeurIPS 2026." }
+            {
+              "date": "2026",
+              "text": "LS-Merge accepted at ICLR 2026."
+            },
+            {
+              "date": "Feb 2026",
+              "text": "PhD conferred, KAIST."
+            },
+            {
+              "date": "2026",
+              "text": "Received a Google TPU Research Award for *Generative AutoML*."
+            },
+            {
+              "date": "2026",
+              "text": "Reviewer for NeurIPS 2026."
+            }
           ]
         },
         {
@@ -68,10 +95,26 @@
           "type": "cards",
           "title": "Current Projects",
           "items": [
-            { "title": "Generative Weight Synthesis", "text": "Generating neural network weights with diffusion, flow matching, and autoregressive models, conditioned on architecture or task.", "tags": "Diffusion, Flow matching, Autoregressive" },
-            { "title": "Latent Representations of Model Weights", "text": "Encoding pretrained weights into structured latent spaces with VAEs and autoencoders, as a basis for generation, merging, and analysis.", "tags": "VAE, Representation learning" },
-            { "title": "Latent-Space Model Merging", "text": "Merging models in a learned latent space with optimal transport alignment (LS-Merge), extended toward mixture-of-experts compression.", "tags": "Model merging, Optimal transport, MoE" },
-            { "title": "Configuration-to-Weights Generation", "text": "Synthesizing weights directly from architectural specifications, with transfer across model families and scales.", "tags": "AutoML, Cross-architecture transfer" }
+            {
+              "title": "Generative Weight Synthesis",
+              "text": "Generating neural network weights with diffusion, flow matching, and autoregressive models, conditioned on architecture or task.",
+              "tags": "Diffusion, Flow matching, Autoregressive"
+            },
+            {
+              "title": "Latent Representations of Model Weights",
+              "text": "Encoding pretrained weights into structured latent spaces with VAEs and autoencoders, as a basis for generation, merging, and analysis.",
+              "tags": "VAE, Representation learning"
+            },
+            {
+              "title": "Latent-Space Model Merging",
+              "text": "Merging models in a learned latent space with optimal transport alignment (LS-Merge), extended toward mixture-of-experts compression.",
+              "tags": "Model merging, Optimal transport, MoE"
+            },
+            {
+              "title": "Configuration-to-Weights Generation",
+              "text": "Synthesizing weights directly from architectural specifications, with transfer across model families and scales.",
+              "tags": "AutoML, Cross-architecture transfer"
+            }
           ]
         },
         {
@@ -79,7 +122,10 @@
           "type": "list",
           "title": "Funding",
           "items": [
-            { "date": "2026", "text": "Google TPU Research Award, *Generative AutoML*" }
+            {
+              "date": "2026",
+              "text": "Google TPU Research Award, *Generative AutoML*"
+            }
           ]
         }
       ]
@@ -87,7 +133,7 @@
     {
       "id": "publications",
       "title": "Publications",
-      "subtitle": "Peer-reviewed papers and thesis.",
+      "subtitle": "Peer-reviewed papers, preprints, and thesis. Full list on Google Scholar.",
       "nav": true,
       "sections": [
         {
@@ -95,7 +141,30 @@
           "type": "publications",
           "title": "2026",
           "items": [
-            { "venue": "ICLR 2026", "title": "LS-Merge: [full paper title]", "authors": "**Bedionita Soro**, [co-authors]", "links": "Paper | #\nCode | #\nBibTeX | #" }
+            {
+              "venue": "ICLR 2026",
+              "title": "LS-Merge: Merging Language Models in Latent Space",
+              "authors": "**Bedionita Soro**, Aoxuan Silvia Zhang, Bruno Andreis, Jaehyeong Jo, Song Chong, Sung Ju Hwang",
+              "tldr": "Encodes model weights into a latent space with a transformer VAE, merges there, and decodes back, enabling merging across different model sizes and architectures.",
+              "links": "Paper | https://openreview.net/forum?id=VSDV0SWwOC\nProject | https://ls-merge.github.io/",
+              "image": "assets/images/pubs/lsmerge.jpg"
+            },
+            {
+              "venue": "Preprint 2026",
+              "title": "SLEM: Spectrum-Aware Latent Expert Merging",
+              "authors": "Dohyeon Kim, **Bedionita Soro**, Bruno Andreis, Sung Ju Hwang",
+              "tldr": "Compresses mixture-of-experts models by grouping, matching, and merging experts in a learned latent space with spectrum-aware merging coefficients.",
+              "links": "arXiv | https://arxiv.org/abs/2610.16484",
+              "image": "assets/images/pubs/slem.jpg"
+            },
+            {
+              "venue": "Preprint 2026",
+              "title": "Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts",
+              "authors": "Dohyeon Kim, **Bedionita Soro**, Sung Ju Hwang",
+              "tldr": "Layer-wise distribution alignment keeps sparse MoE outputs consistent when the number of active experts changes at inference time.",
+              "links": "arXiv | https://arxiv.org/abs/2609.09241",
+              "image": "assets/images/pubs/lda.jpg"
+            }
           ]
         },
         {
@@ -103,7 +172,22 @@
           "type": "publications",
           "title": "2025",
           "items": [
-            { "venue": "ICLR 2025", "title": "D2NWG: [full paper title]", "authors": "**Bedionita Soro**, [co-authors]", "links": "Paper | #\nCode | #\nBibTeX | #" }
+            {
+              "venue": "ICLR 2025",
+              "title": "Diffusion-Based Neural Network Weights Generation (D2NWG)",
+              "authors": "**Bedionita Soro**, Bruno Andreis, Hayeon Lee, Wonyong Jeong, Song Chong, Frank Hutter, Sung Ju Hwang",
+              "tldr": "A latent diffusion model that generates network weights conditioned on a dataset or architecture, for unseen tasks.",
+              "links": "Paper | https://arxiv.org/abs/2402.18153",
+              "image": "assets/images/pubs/d2nwg.jpg"
+            },
+            {
+              "venue": "ICLR 2025 Workshop",
+              "title": "Instruction-Guided Autoregressive Neural Network Parameter Generation (IGPG)",
+              "authors": "**Bedionita Soro**, Bruno Andreis, Song Chong, Sung Ju Hwang",
+              "tldr": "A VQ-VAE plus autoregressive transformer that generates parameters from task descriptions and architecture specifications. Workshop on Neural Network Weights as a New Data Modality.",
+              "links": "arXiv | https://arxiv.org/abs/2504.02012",
+              "image": "assets/images/pubs/igpg.jpg"
+            }
           ]
         },
         {
@@ -111,7 +195,56 @@
           "type": "publications",
           "title": "2024",
           "items": [
-            { "venue": "NeurIPS 2024", "title": "SNE: [full paper title]", "authors": "[authors, with **Bedionita Soro**]", "links": "Paper | #\nCode | #\nBibTeX | #" }
+            {
+              "venue": "NeurIPS 2024",
+              "title": "Set-based Neural Network Encoding Without Weight Tying (SNE)",
+              "authors": "Bruno Andreis, **Bedionita Soro**, Philip H. S. Torr, Sung Ju Hwang",
+              "tldr": "Encodes neural network weights as sets, enabling property prediction across architectures without weight tying.",
+              "links": "Paper | https://arxiv.org/abs/2305.16625",
+              "image": "assets/images/pubs/sne.jpg"
+            }
+          ]
+        },
+        {
+          "id": "s-pub-2023",
+          "type": "publications",
+          "title": "2023",
+          "items": [
+            {
+              "venue": "ICCVW 2023",
+              "title": "Enhancing Differentiable Architecture Search: A Study on Small Number of Cell Blocks in the Search Stage, and Important Branches-Based Cells Selection",
+              "authors": "**Bedionita Soro**, Chong Song",
+              "tldr": "Searches DARTS cells with a single normal and reduction cell plus an auxiliary residual connection, cutting search cost.",
+              "links": "Paper | https://openaccess.thecvf.com/content/ICCV2023W/RCV/papers/Soro_Enhancing_Differentiable_Architecture_Search_A_Study_on_Small_Number_of_ICCVW_2023_paper.pdf",
+              "image": "assets/images/pubs/darts.jpg"
+            }
+          ]
+        },
+        {
+          "id": "s-pub-2019",
+          "type": "publications",
+          "title": "2019 and earlier",
+          "items": [
+            {
+              "venue": "Sensors 2019",
+              "title": "A Wavelet Scattering Feature Extraction Approach for Deep Neural Network Based Indoor Fingerprinting Localization",
+              "authors": "**Bedionita Soro**, C. Lee",
+              "tldr": "Wavelet scattering features of RSSI signals feed a deep neural network for indoor positioning.",
+              "links": "Paper | https://doi.org/10.3390/s19081790",
+              "image": "assets/images/pubs/wavelet.jpg"
+            },
+            {
+              "venue": "IEEE Access 2019",
+              "title": "Joint Time-Frequency RSSI Features for Convolutional Neural Network-Based Indoor Fingerprinting Localization",
+              "authors": "**Bedionita Soro**, C. Lee",
+              "links": "Paper | https://doi.org/10.1109/ACCESS.2019.2932469"
+            },
+            {
+              "venue": "TENCON 2018",
+              "title": "Performance Comparison of Indoor Fingerprinting Techniques Based on Artificial Neural Network",
+              "authors": "**Bedionita Soro**, C. Lee",
+              "links": "Paper | https://doi.org/10.1109/TENCON.2018.8650230"
+            }
           ]
         },
         {
@@ -119,7 +252,12 @@
           "type": "publications",
           "title": "Thesis",
           "items": [
-            { "venue": "PhD 2026", "title": "Weight-Space Learning as a Foundation for Deep AutoML", "authors": "**Bedionita Soro**. KAIST.", "links": "PDF | #" }
+            {
+              "venue": "PhD 2026",
+              "title": "Weight-Space Learning as a Foundation for Deep AutoML",
+              "authors": "**Bedionita Soro**. KAIST.",
+              "links": ""
+            }
           ]
         }
       ]
@@ -149,8 +287,14 @@
           "type": "list",
           "title": "Courses & Certificates",
           "items": [
-            { "date": "2026", "text": "[Course name], [Provider]" },
-            { "date": "2025", "text": "[Course name], [Provider]" }
+            {
+              "date": "2026",
+              "text": "[Course name], [Provider]"
+            },
+            {
+              "date": "2025",
+              "text": "[Course name], [Provider]"
+            }
           ]
         },
         {
@@ -158,7 +302,10 @@
           "type": "list",
           "title": "Currently Studying",
           "items": [
-            { "date": "2026", "text": "[Topic or book], [short note]" }
+            {
+              "date": "2026",
+              "text": "[Topic or book], [short note]"
+            }
           ]
         },
         {
@@ -180,7 +327,10 @@
           "type": "list",
           "title": "Workshops & Schools Attended",
           "items": [
-            { "date": "2026", "text": "[Summer school or workshop], [Location]" }
+            {
+              "date": "2026",
+              "text": "[Summer school or workshop], [Location]"
+            }
           ]
         },
         {
@@ -188,7 +338,10 @@
           "type": "list",
           "title": "Teaching & Mentoring",
           "items": [
-            { "date": "2026", "text": "[Course, tutorial, or students mentored]" }
+            {
+              "date": "2026",
+              "text": "[Course, tutorial, or students mentored]"
+            }
           ]
         },
         {
@@ -196,7 +349,10 @@
           "type": "list",
           "title": "Talks",
           "items": [
-            { "date": "2026", "text": "[Talk title], [Venue]" }
+            {
+              "date": "2026",
+              "text": "[Talk title], [Venue]"
+            }
           ]
         }
       ]
@@ -212,7 +368,10 @@
           "type": "list",
           "title": "Awards & Grants",
           "items": [
-            { "date": "2026", "text": "Google TPU Research Award, *Generative AutoML*" }
+            {
+              "date": "2026",
+              "text": "Google TPU Research Award, *Generative AutoML*"
+            }
           ]
         },
         {
@@ -220,7 +379,10 @@
           "type": "list",
           "title": "Reviewing",
           "items": [
-            { "date": "2026", "text": "NeurIPS" }
+            {
+              "date": "2026",
+              "text": "NeurIPS"
+            }
           ]
         },
         {
@@ -228,7 +390,10 @@
           "type": "list",
           "title": "Community",
           "items": [
-            { "date": "Ongoing", "text": "Developing a writing system and educational materials for the Senufo language (Korhogo dialect)." }
+            {
+              "date": "Ongoing",
+              "text": "Developing a writing system and educational materials for the Senufo language (Korhogo dialect)."
+            }
           ]
         }
       ]
@@ -250,10 +415,22 @@
           "type": "list",
           "title": "Online",
           "items": [
-            { "date": "Email", "text": "[sorobedio@kaist.ac.kr](mailto:sorobedio@kaist.ac.kr)" },
-            { "date": "Scholar", "text": "[Google Scholar](https://scholar.google.com/)" },
-            { "date": "GitHub", "text": "[github.com/sorobedio](https://github.com/sorobedio)" },
-            { "date": "LinkedIn", "text": "[linkedin.com/in/[username]](https://www.linkedin.com/)" }
+            {
+              "date": "Email",
+              "text": "[sorobedio@kaist.ac.kr](mailto:sorobedio@kaist.ac.kr)"
+            },
+            {
+              "date": "Scholar",
+              "text": "[Google Scholar](https://scholar.google.com/citations?user=oHgbNZQAAAAJ&hl=en)"
+            },
+            {
+              "date": "GitHub",
+              "text": "[github.com/sorobedio](https://github.com/sorobedio)"
+            },
+            {
+              "date": "LinkedIn",
+              "text": "[linkedin.com/in/[username]](https://www.linkedin.com/)"
+            }
           ]
         }
       ]

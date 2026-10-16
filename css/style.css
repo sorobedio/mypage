@@ -103,16 +103,24 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.25; }
 
 /* ---------- Publications ---------- */
 .pubs { list-style: none; padding: 0; margin: 0; }
-.pubs li { display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.pubs li { padding: 18px 0; border-bottom: 1px solid var(--line); }
 .pubs li:last-child { border-bottom: none; }
+.pubs li.has-fig { display: grid; grid-template-columns: 300px 1fr; gap: 24px; align-items: start; }
+.pub-fig {
+  display: block; background: #fff; border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px; transition: border-color .15s;
+}
+.pub-fig:hover { border-color: var(--accent); }
+.pub-fig img { display: block; width: 100%; height: auto; max-height: 220px; object-fit: contain; }
 .venue {
-  align-self: start; text-align: center; font-size: .75rem; font-weight: 600;
-  background: var(--accent-soft); color: var(--accent); border-radius: 5px; padding: 4px 6px;
+  display: inline-block; font-size: .75rem; font-weight: 600; margin-bottom: 6px;
+  background: var(--accent-soft); color: var(--accent); border-radius: 5px; padding: 2px 8px;
 }
 .pubs p { margin: 0; }
 .title { font-weight: 600; }
 .authors { color: var(--muted); font-size: .92rem; }
-.pub-links { display: flex; gap: 14px; font-size: .85rem; margin-top: 4px !important; }
+.tldr { font-size: .93rem; margin-top: 6px !important; }
+.pub-links { display: flex; flex-wrap: wrap; gap: 14px; font-size: .85rem; margin-top: 6px !important; }
 
 /* ---------- Prose (markdown) ---------- */
 .prose > :first-child { margin-top: 0; }
@@ -156,8 +164,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.25; }
   .hero { grid-template-columns: 1fr; gap: 20px; }
   .avatar { width: 140px; height: 140px; }
   .cards { grid-template-columns: 1fr; }
-  .pubs li { grid-template-columns: 1fr; gap: 6px; }
-  .venue { justify-self: start; }
+  .pubs li.has-fig { grid-template-columns: 1fr; gap: 12px; }
   .post-item { grid-template-columns: 1fr; }
   .post-date { grid-row: auto; }
 }
